@@ -1,0 +1,28 @@
+{
+  "name": "tree-entity",
+  "version": "1.0.0",
+  "description": "树控件组件",
+  "main": "lib/index.js",
+  "author": "Zhangjihong <njhxzhangjh@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangjh/FE_Components/tree-entity"
+  },
+  "scripts": {
+    "babel": "babel src -d lib --copy-files",
+    "prepublish": "npm run babel"
+  },
+  "files": [
+    "lib"
+  ],
+  "peerDependencies": {
+    "antd": ">= 2.6.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  }
+}
