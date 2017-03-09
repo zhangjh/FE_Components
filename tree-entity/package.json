@@ -7,7 +7,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhangjh/FE_Components/tree-entity"
+    "url": "https://github.com/zhangjh/FE_Components/tree/master/tree-entity"
   },
   "scripts": {
     "babel": "babel src -d lib --copy-files",
