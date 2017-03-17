@@ -1,6 +1,9 @@
 # 树控件组件使用说明
 使用demo参见`tree-entity/src/TreeMenuDemo.js`
 
+## demo演示
+![演示](http://wx3.sinaimg.cn/mw690/62d95157gy1fdgq74a3b2j20es0h4gly.jpg)
+
 安装：
 > npm install tree-entity
 

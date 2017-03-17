@@ -152,7 +152,7 @@ class TreeMenuDemo extends React.Component {
         id: 12,
         isLeaf: false,
         key: 12,
-        name: 'zhouhongtestSET',
+        name: 'zhangjihong Test',
         titleStyle: {
           background: 'red',
         },
