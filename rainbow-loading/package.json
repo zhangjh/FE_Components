@@ -1,6 +1,6 @@
 {
   "name": "rainbow-loading",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A rainbow loadin component written by ant-design for react projects.",
   "main": "lib/index.js",
   "author": "njhxzhangjihong@126.com",
@@ -10,8 +10,7 @@
     "url": "https://github.com/zhangjh/FE_Components/tree/master/rainbow-loading"
   },
   "scripts": {
-    "babel": "babel src -d lib --copy-files",
-    "prepublish": "npm run babel"
+    "babel": "babel src -d lib --copy-files"
   },
   "files": [
     "lib"

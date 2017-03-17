@@ -14,14 +14,17 @@ This component is a rainbow loading just like the picture below shows:
 In React Component
 ```js
     import React from 'react';
-    import TreeEntity from 'TreeEntity';
+    import Loading from 'rainbow-loading';
     ......
     render(){
       return (
         <Loading 
-            numbers={[1,2,3,4,5]}
+            numbers={[1,2,3]}
         />
       );
     }
 ```
+The numbers property is optional, which controls the line number of rainbow.
+As default, the line number of rainbow is five. You can pass the numbers property to modify.
+And you can set seven lines at most.
 
