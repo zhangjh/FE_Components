@@ -1,0 +1,25 @@
+{
+  "name": "full-text",
+  "version": "1.0.1",
+  "description": "富文本编辑器",
+  "main": "lib/index.js",
+  "author": "njhxzhangjh@gmail.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangjh/FE_Components/full-text"
+  },
+  "scripts": {
+    "babel": "babel src -d lib --copy-files"
+  },
+  "files": [
+    "lib"
+  ],
+  "peerDependencies": {
+    "antd": "^2.6.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "mditor": "^1.2.1"
+  }
+}
