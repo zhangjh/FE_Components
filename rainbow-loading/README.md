@@ -26,5 +26,5 @@ In React Component
 ```
 The numbers property is optional, which controls the line number of rainbow.
 As default, the line number of rainbow is five. You can pass the numbers property to modify.
-And you can set seven lines at most.
+But you can set seven lines at most.
 
