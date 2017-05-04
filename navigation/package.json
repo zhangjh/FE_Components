@@ -1,0 +1,33 @@
+{
+  "name": "siderbar",
+  "version": "1.0.0",
+  "description": "左侧内嵌式导航菜单组件",
+  "main": "lib/index.js",
+  "author": "njhxzhangjh@gmail.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangjh/FE_Components/full-text/siderbar"
+  },
+  "scripts": {
+    "babel": "babel src -d lib --copy-files",
+    "prepublish": "npm run babel"
+  },
+  "files": [
+    "lib"
+  ],
+  "peerDependencies": {
+    "antd": ">= 2.6.0",
+    "prop-types": "^15.5.8"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
