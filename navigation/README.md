@@ -14,7 +14,8 @@ demo：
     render(){
       return (
         <Siderbar 
-          menuData={menuData}     
+          menuData={menuData}    
+          showSwitch
         />
       );
     }
@@ -38,15 +39,18 @@ const menuData = [{
   current: 当前选中的菜单，默认为1，可以根据路径计算后传入
   onClick: 菜单项点击以后的回调函数
   onOpenChange: 菜单项点开关闭后的回调函数
+  showSwitch: true/false，设置是否显示深浅色主体切换的按钮，默认不显示，默认主题为浅色
   以上都是可选参数，只有menuData是必选参数，并且有格式要求
   menuData: [
     key: xx,
     title: xx,
     type: xx,
+    show: true/false,    // 设置该菜单项是否要显示
     options: [
       {
         key: xx,
-        content: xx   
+        content: xx,
+        show: true/false,    // 设置该菜单项是否要显示
       }
     ]
   ]

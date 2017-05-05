@@ -1,10 +1,10 @@
 /**
- * Created by jihong.zjh on 2017/5/4.
+ * Created by njhxzhangjh@gmail.com on 2017/5/4.
  * Des: 内嵌式左侧菜单组件
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Menu, Icon } from 'antd';
+import { Menu, Icon, Switch } from 'antd';
 
 const SubMenu = Menu.SubMenu;
 
@@ -14,6 +14,7 @@ class Siderbar extends React.Component {
     this.state = {
       current: this.props.current || '1',
       openKeys: [],
+      theme: 'light',
     };
     this.onOpenChange = this.onOpenChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -45,31 +46,58 @@ class Siderbar extends React.Component {
   }
   render() {
     return (
-      <Menu
-        mode="inline"
-        openkeys={this.state.openKeys}
-        selectedKeys={[this.state.current]}
-        style={this.props.style || { width: 240 }}
-        onOpenChange={this.onOpenChange}
-        onClick={this.handleClick}
-      >
-        {
-          this.props.menuData.map(item =>
-            <SubMenu
-              key={item.key}
-              title={<span><Icon type={item.type} />{item.title}</span>}
-            >
-              {
-                item.options.map(option =>
-                  <Menu.Item key={option.key}>
-                    { option.content }
-                  </Menu.Item>,
-                )
+      <div>
+        { this.props.showSwitch ?
+          <Switch
+            checked={this.state.theme === 'dark'}
+            onChange={(value) => {
+              this.setState({
+                theme: value ? 'dark' : 'light',
+              });
+            }}
+            checkedChildren="Dark"
+            unCheckedChildren="Light"
+          />
+          : null }
+        <br />
+        <br />
+        <Menu
+          mode="inline"
+          openkeys={this.state.openKeys}
+          selectedKeys={[this.state.current]}
+          style={this.props.style || { width: 240, height: '100%' }}
+          theme={this.state.theme}
+          onOpenChange={this.onOpenChange}
+          onClick={this.handleClick}
+        >
+          {
+            this.props.menuData.map((item) => {
+              if (item.show) {
+                return (
+                  <SubMenu
+                    key={item.key}
+                    title={<span><Icon type={item.type} />{item.title}</span>}
+                  >
+                    {
+                      item.options.map((option) => {
+                        if (option.show) {
+                          return (
+                            <Menu.Item key={option.key}>
+                              { option.content }
+                            </Menu.Item>
+                          );
+                        }
+                        return null;
+                      })
+                    }
+                  </SubMenu>
+                );
               }
-            </SubMenu>,
-          )
-        }
-      </Menu>
+              return null;
+            })
+          }
+        </Menu>
+      </div>
     );
   }
 }
@@ -83,3 +111,4 @@ Siderbar.propTypes = {
 };
 
 export default Siderbar;
+

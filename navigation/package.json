@@ -1,6 +1,6 @@
 {
   "name": "siderbar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "左侧内嵌式导航菜单组件",
   "main": "lib/index.js",
   "author": "njhxzhangjh@gmail.com",
