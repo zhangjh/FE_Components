@@ -5,6 +5,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Menu, Icon, Switch } from 'antd';
+import 'antd/dist/antd.css';
 
 const SubMenu = Menu.SubMenu;
 
@@ -20,17 +21,12 @@ class Siderbar extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
   onOpenChange(openKeys) {
-    const latestOpenKey = openKeys.find(key => !(this.openKeys.indexOf(key) > -1));
-    const latestCloseKey = this.state.openKeys.find(key => !(openKeys.indexOf(key) > -1));
-    let nextOpenKeys = [];
-    if (latestOpenKey) {
-      nextOpenKeys = latestOpenKey;
-    }
-    if (latestCloseKey) {
-      nextOpenKeys = latestCloseKey;
-    }
+    // const latestOpenKeys = openKeys.filter(key => this.state.openKeys.indexOf(key) === -1);
+    // const latestCloseKeys = this.state.openKeys.filter(key => openKeys.indexOf(key) !== -1);
+    // const nextOpenKeys = [];
+    console.log(openKeys);
     this.setState({
-      openKeys: nextOpenKeys,
+      openKeys: openKeys.slice(openKeys.length - 1),
     });
     if (this.props.onOpenChange) {
       this.props.onOpenChange();
@@ -46,21 +42,23 @@ class Siderbar extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ height: '100%' }}>
         { this.props.showSwitch ?
-          <Switch
-            checked={this.state.theme === 'dark'}
-            onChange={(value) => {
-              this.setState({
-                theme: value ? 'dark' : 'light',
-              });
-            }}
-            checkedChildren="Dark"
-            unCheckedChildren="Light"
-          />
+          <div>
+            <Switch
+              checked={this.state.theme === 'dark'}
+              onChange={(value) => {
+                this.setState({
+                  theme: value ? 'dark' : 'light',
+                });
+              }}
+              checkedChildren="Dark"
+              unCheckedChildren="Light"
+            />
+            <br />
+            <br />
+          </div>
           : null }
-        <br />
-        <br />
         <Menu
           mode="inline"
           openkeys={this.state.openKeys}
@@ -111,4 +109,3 @@ Siderbar.propTypes = {
 };
 
 export default Siderbar;
-
