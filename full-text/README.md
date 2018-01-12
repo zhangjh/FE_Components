@@ -45,8 +45,8 @@
 [下载mditor](https://github.com/Houfeng/mditor)
 页面引入：
 ```html
-<link rel="stylesheet" href="/atask/mditor/css/mditor.min.css" />
-<script src="/atask/mditor/js/mditor.min.js"></script>
+<link rel="stylesheet" href="/path/mditor/css/mditor.min.css" />
+<script src="/path/mditor/js/mditor.min.js"></script>
 ```
 
 
