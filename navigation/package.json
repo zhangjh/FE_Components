@@ -4,7 +4,7 @@
   "description": "左侧内嵌式导航菜单组件",
   "main": "lib/index.js",
   "author": "njhxzhangjh@gmail.com",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/zhangjh/FE_Components/full-text/siderbar"
