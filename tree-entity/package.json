@@ -4,7 +4,7 @@
   "description": "树控件组件",
   "main": "lib/index.js",
   "author": "Zhangjihong <njhxzhangjh@gmail.com>",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/zhangjh/FE_Components/tree/master/tree-entity"
